@@ -6,7 +6,7 @@
      { itemName: "Hot Coffee      ", quantity: 2, unitPrice: 1.00},
      { itemName: "Hash Brown      ", quantity: 4, unitPrice: 0.40}
  ]
- let totalPrice;
+ 
  let res = 0;
  
  console.log("QTY     ITEM                 TOTAL");
