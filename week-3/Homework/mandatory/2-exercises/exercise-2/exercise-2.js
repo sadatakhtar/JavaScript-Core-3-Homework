@@ -9,3 +9,22 @@ let hogwarts = [
     { firstName: "Minerva", lastName: "McGonagall", house: "Gryffindor", pet: null, occupation: "Teacher" },
     { firstName: "Albus", lastName: "Dumbledore", house: "Gryffindor", pet: "Phoenix", occupation: "Teacher" }
 ]
+
+let newArr = hogwarts.filter(item => {
+   let {firstName, lastName, house} = item;
+
+        if(house === "Gryffindor"){
+            console.log(firstName, lastName);
+   }    
+});
+    
+console.log(newArr);
+
+
+
+
+
+
+
+
+
