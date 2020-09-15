@@ -6,13 +6,15 @@
      { itemName: "Hot Coffee      ", quantity: 2, unitPrice: 1.00},
      { itemName: "Hash Brown      ", quantity: 4, unitPrice: 0.40}
  ]
- let grandTotal;
+ let totalPrice;
+ 
  console.log("QTY     ITEM                 TOTAL");
 
  order.filter(items => {
      let {itemName, quantity, unitPrice} = items;
      totalItemsCost = getTotal(quantity, unitPrice);
-     finalTotal = totalSum(totalItemsCost);
+     //finalTotal = totalSum(totalItemsCost);
+     finalP = getGrandTotal(quantity, unitPrice);
      console.log(`${quantity}       ${itemName}     ${totalItemsCost}`);      
  })
 
@@ -21,8 +23,10 @@ function getTotal(quantity, price){
     return quantity * price;
 }
 
-function totalSum(price){
-   return price += totalItemsCost;
+function getGrandTotal(quantity, price){
+    let itemPrice = (quantity * price);
+    totalPrice += itemPrice; 
+    return totalPrice;
 }
 
-console.log(`Total: ${finalTotal}`);
+console.log(`Total: ${finalP}`);
