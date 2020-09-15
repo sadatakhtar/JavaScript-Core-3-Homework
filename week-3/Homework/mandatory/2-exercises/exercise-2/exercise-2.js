@@ -10,15 +10,24 @@ let hogwarts = [
     { firstName: "Albus", lastName: "Dumbledore", house: "Gryffindor", pet: "Phoenix", occupation: "Teacher" }
 ]
 
-let newArr = hogwarts.filter(item => {
+//TASK 1
+let gryffindorResidents = hogwarts.filter(item => {
    let {firstName, lastName, house} = item;
-
-        if(house === "Gryffindor"){
-            console.log(firstName, lastName);
+    if(house === "Gryffindor"){
+        console.log(firstName, lastName);
    }    
 });
     
-console.log(newArr);
+
+//TASK 2
+let teachersWithPets = hogwarts.filter(items => {
+    let {firstName, lastName, pet, occupation} = items;
+     if(occupation === "Teacher" && pet){
+        console.log(firstName, lastName);
+    }
+});
+
+
 
 
 
